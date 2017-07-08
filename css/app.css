@@ -1,0 +1,22 @@
+input.fform {
+	padding: 10px;
+	width:100%;
+}
+
+#theapp {
+	padding: 10px;
+	padding-top: 20px;
+}
+
+#thelogo {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+#theresult {
+	display: none;
+}
+
+p, table {
+	font-size: 12px;
+}

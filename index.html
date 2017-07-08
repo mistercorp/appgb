@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppGB</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="cordova.js"></script>
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+      <div id="theapp">
+
+		<div id="thelogo"> <img src="img/logo.jpg"></div>
+
+		<div id="theform">
+        <p>Ingrese la cantidad de metros cuadrados<br>
+        <input type="number" id="metros" class="fform">
+        </p>
+        <p>Ingrese el tipo de proyecto<br>
+        <select id="tipo" class="fform">
+		  <option value="1">Shopping</option>
+		  <option value="2">Departamentos</option>
+		  <option value="3">Estacionamiento Interior</option>
+		  <option value="4">Estacionamiento Exterior</option>
+		  <option value="5">Oficinas</option>
+		</select>
+        </p>
+        <p>
+        <h5>Incluir:</h5>
+        <input id="electricidad" type="checkbox"><label for="electricidad">Electricidad</label><br>
+        <input id="aa" type="checkbox"><label for="aa">AA</label><br>
+        <input id="cctv" type="checkbox"><label for="cctv">CCTV</label><br>
+        <input id="senalesdebiles" type="checkbox"><label for="senalesdebiles">Señales Débiles</label><br>
+        <input id="ascensores" type="checkbox"><label for="ascensores">Ascensores</label><br>
+        <input id="pci" type="checkbox"><label for="pci">PCI</label><br>
+        <input id="obrasexteriores" type="checkbox"><label for="obrasexteriores">Obras Exteriores</label>
+		</p>
+
+        <p style="text-align: center;">
+        	<button class="button" style="font-size: 24px;background-color:#2d3188;" onclick='calcular()'>Calcular</button>
+        </p>
+        </div>
+
+        <div id="theresult">
+
+<table>
+  <thead>
+    <tr>
+      <th>ESTIMACIONES</th>
+      <th></th>
+      <th>Costo (US$)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tipo de Proyecto</td>
+      <td><span id="tipoprint">Shopping</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Cantidad en m2</td>
+      <td><span id="metrosprint">0</span> m2</td>
+      <td>$ <span id="cantprecioprint">0</span></td>
+    </tr>
+    <tr>
+      <td>Electricidad</td>
+      <td></td>
+      <td>$ <span id="electricidadprint">0</span></td>
+    </tr>
+    <tr>
+      <td>AA</td>
+      <td></td>
+      <td>$ <span id="aaprint">0</span></td>
+    </tr>
+    <tr>
+      <td>CCTV</td>
+      <td></td>
+      <td>$ <span id="cctvprint">0</span></td>
+    </tr>
+    <tr>
+      <td>Señales Débiles</td>
+      <td></td>
+      <td>$ <span id="senalesprint">0</span></td>
+    </tr>
+    <tr>
+      <td>Ascensores</td>
+      <td></td>
+      <td>$ <span id="ascensoresprint">0</span></td>
+    </tr>
+    <tr>
+      <td>PCI</td>
+      <td></td>
+      <td>$ <span id="pciprint">0</span></td>
+    </tr>
+    <tr>
+      <td>Obras Exteriores</td>
+      <td></td>
+      <td>$ <span id="obrasprint">0</span></td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL ESTIMADO</strong></td>
+      <td></td>
+      <td>$ <span id="totalprint">0</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="text-align: center;">
+        	<button class="button" style="font-size: 24px;background-color:#2d3188;" onclick='volver()'>Volver</button>
+        </p>
+
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
