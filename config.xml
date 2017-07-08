@@ -18,7 +18,7 @@
         AGB
     </author>
 	
-	<preference name="fullscreen" value="true" />
+	<preference name="fullscreen" value="false" />
     <feature name="http://api.phonegap.com/1.0/network"/>
     <access origin="*" />
     <access origin="*"/>
