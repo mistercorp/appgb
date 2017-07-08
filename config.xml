@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
 	<preference name="phonegap-version" value="cli-6.4.0" />
-	<preference name="orientation" value="landscape" />
+	<preference name="orientation" value="portrait" />
     <name>AppGB</name>
 
     <description>
