@@ -29,5 +29,7 @@
         <allow-intent href="market:*" />
     </platform>
 
+    <icon src="logo.png" />
+
 </widget>
 
