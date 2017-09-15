@@ -17,20 +17,54 @@
 
 		<div id="thelogo"> <img src="img/logo.jpg"></div>
 
-		<div id="theform">
-        <p>Ingrese la cantidad de metros cuadrados<br>
-        <input type="number" id="metros" class="fform">
+    <div id="login">
+       <h5>Ingrese su contraseña.        
+        </h5>
+        <p>
+            <input type="password" id="paswor" class="fform">
         </p>
-        <p>Ingrese el tipo de proyecto<br>
-        <select id="tipo" class="fform">
-		  <option value="1">Shopping</option>
-		  <option value="2">Departamentos</option>
-		  <option value="3">Estacionamiento Interior</option>
-		  <option value="4">Estacionamiento Exterior</option>
-		  <option value="5">Oficinas</option>
-		</select>
+        <p style="text-align: center;">
+          <button class="button" style="font-size: 24px;background-color:#2d3188;" onclick='agblogin()'>Ingresar</button>
+        </p>
+    </div>
+
+		<div id="theform">
+        <h5>Ingrese la cantidad de metros cuadrados por tipo de proyecto.        
+        </h5>
+        <p>
+          Shopping <br>
+          <input type="number" id="metros1" class="fform" value="0">
         </p>
         <p>
+          Departamentos <br>
+          <input type="number" id="metros2" class="fform" value="0">
+        </p>
+        <p>
+          Estacionamiento Interior <br>
+          <input type="number" id="metros3" class="fform" value="0">
+        </p>
+        <p>
+          Estacionamiento Exterior <br>
+          <input type="number" id="metros4" class="fform" value="0">
+        </p>
+        <p>
+          Oficinas <br>
+          <input type="number" id="metros5" class="fform" value="0">
+        </p>
+        <p>
+          Supermercado <br>
+          <input type="number" id="metros6" class="fform" value="0">
+        </p>
+        </p>
+        
+
+        <p style="text-align: center;">
+        	<button class="button" style="font-size: 24px;background-color:#2d3188;" onclick='siguiente()'>Siguiente</button>
+        </p>
+        </div>
+
+        <div id="theform2">
+        	<p>
         <h5>Incluir:</h5>
         <input id="electricidad" type="checkbox"><label for="electricidad">Electricidad</label><br>
         <input id="aa" type="checkbox"><label for="aa">AA</label><br>
@@ -40,9 +74,11 @@
         <input id="pci" type="checkbox"><label for="pci">PCI</label><br>
         <input id="obrasexteriores" type="checkbox"><label for="obrasexteriores">Obras Exteriores</label>
 		</p>
-
-        <p style="text-align: center;">
+		<p style="text-align: center;">
         	<button class="button" style="font-size: 24px;background-color:#2d3188;" onclick='calcular()'>Calcular</button>
+        </p>
+        <p style="text-align: center;">
+        	<button class="button" style="font-size: 24px;background-color:#2d3188;" onclick='volver2()'>Volver</button>
         </p>
         </div>
 
@@ -59,7 +95,7 @@
   <tbody>
     <tr>
       <td>Tipo de Proyecto</td>
-      <td><span id="tipoprint">Shopping</span></td>
+      <td><span id="tipoprint"></span></td>
       <td></td>
     </tr>
     <tr>

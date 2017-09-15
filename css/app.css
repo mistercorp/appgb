@@ -13,6 +13,14 @@ input.fform {
 	padding-bottom: 30px;
 }
 
+#theform {
+	display: none;
+}
+
+#theform2 {
+	display: none;
+}
+
 #theresult {
 	display: none;
 }
