@@ -192,7 +192,7 @@ function calcular () {
 }
 
 function agblogin () {
-	if ($('#paswor').val()=="172OSA") {
+	if ($('#paswor').val()=="172osa") {
 		$('#login').slideUp();
 		$('#theform').slideDown();
 	} else {
