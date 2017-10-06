@@ -107,12 +107,18 @@ function calcular () {
 	} else {
 	
 	var grisresult= ( (shopping_gris * shopping_metros)+(departamentos_gris * departamentos_metros)+(estacionamientointerior_gris * estacionamientointerior_metros)+(estacionamientoexterior_gris * estacionamientoexterior_metros)+(oficinas_gris * oficinas_metros)+(supermercado_gris * supermercado_metros) );
+	
+	if ($('#obragris').is(":checked")) {
+		var obragrisresult= ( (shopping_gris * shopping_metros)+(departamentos_gris * departamentos_metros)+(estacionamientointerior_gris * estacionamientointerior_metros)+(estacionamientoexterior_gris * estacionamientoexterior_metros)+(oficinas_gris * oficinas_metros)+(supermercado_gris * supermercado_metros) );
+	} else {
+		var obragrisresult=0
+	}
 
 	if ($('#electricidad').is(":checked")) {
 		var electricidadresult= ( (shopping_electricidad * shopping_metros)+(departamentos_electricidad * departamentos_metros)+(estacionamientointerior_electricidad * estacionamientointerior_metros)+(estacionamientoexterior_electricidad * estacionamientoexterior_metros)+(oficinas_electricidad * oficinas_metros)+(supermercado_electricidad * supermercado_metros) );
 	} else {
 		var electricidadresult=0
-}
+	}
 	if ($('#aa').is(":checked")) {
 		var aaresult= ( (shopping_aa * shopping_metros)+(departamentos_aa * departamentos_metros)+(estacionamientointerior_aa * estacionamientointerior_metros)+(estacionamientoexterior_aa * estacionamientoexterior_metros)+(oficinas_aa * oficinas_metros)+(supermercado_aa * supermercado_metros) );
 	} else {
@@ -150,7 +156,7 @@ function calcular () {
 	}
 	
 
-	var total = grisresult+electricidadresult+aaresult+cctvresult+senalesresult+ascensoresresult+pciresult+obrasresult;
+	var total = obragrisresult+electricidadresult+aaresult+cctvresult+senalesresult+ascensoresresult+pciresult+obrasresult;
 
 	if (shopping_metros!=0) {
 		nombre = nombre + "Shopping "
@@ -173,7 +179,7 @@ function calcular () {
 
 	$('#tipoprint').html(nombre);
 	$('#metrosprint').html(totaldemetros);
-	$('#cantprecioprint').html(Number(grisresult).toLocaleString());
+	$('#cantprecioprint').html(Number(obragrisresult).toLocaleString());
 	$('#electricidadprint').html(Number(electricidadresult).toLocaleString());
 	$('#aaprint').html(Number(aaresult).toLocaleString());
 	$('#cctvprint').html(Number(cctvresult).toLocaleString());
